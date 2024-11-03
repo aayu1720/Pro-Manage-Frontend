@@ -1,0 +1,28 @@
+.container {
+  height: 100%;
+  max-width: 40%;
+  min-width: 27%;
+  margin-left: 1rem;
+  background-color: #eef2f5;
+}
+
+.heading {
+  width: 85%;
+  padding: 0.5rem 0rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgBox {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plusImg {
+  height: 2.5vh;
+  width: 2.5vh;
+}

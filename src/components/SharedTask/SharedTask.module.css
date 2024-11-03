@@ -1,0 +1,126 @@
+.task {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #edf5fe;
+  border-radius: 10px;
+}
+
+.innerBox {
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
+
+.boxOne {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-size: x-small;
+  margin: 3% 0%;
+}
+
+.boxTwo {
+  margin: 3% 0%;
+  font-size: x-large;
+}
+
+.checklistBox {
+  width: 100%;
+  height: 48%;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.checklistBox::-webkit-scrollbar {
+  width: 10px;
+}
+
+.checklistBox::-webkit-scrollbar-thumb {
+  background-color: #8daab9cc;
+  border-radius: 10px;
+}
+
+.checklistBox::-webkit-scrollbar-track {
+  background-color: #a9d5ebcc;
+  border-radius: 10px;
+}
+
+.checklist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  font-weight: bold;
+  margin: 3% 0%;
+}
+
+.taskBox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.3rem 0rem;
+  margin: 0.5rem 0rem;
+  font-size: small;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+}
+
+.checkbox {
+  margin: 0.4rem 0.3rem;
+}
+
+.taskInput {
+  width: 90%;
+  font-weight: bold;
+}
+
+.dueDate {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  font-weight: bold;
+  margin: 2% 0%;
+}
+
+.taskStatus {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background-color: #dbdbdb;
+  padding: 3%;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.statusBox {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.dateStatus {
+  border: none;
+  border-radius: 5px;
+  background-color: #cf3636;
+  padding: 1.5%;
+  margin: 1%;
+  color: #ffffff;
+  font-size: x-small;
+}
+
+.priority {
+  margin-left: 0.3rem;
+}
+
+@media (max-width: 550px) {
+  .task {
+    width: 80%;
+  }
+}

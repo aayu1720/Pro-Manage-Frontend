@@ -1,0 +1,69 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.nameDisplay,
+.heading {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 0rem 0.5rem;
+  box-sizing: border-box;
+}
+
+.board {
+  display: flex;
+  align-items: center;
+}
+
+.addPeople {
+  font-size: small;
+  color: #707070;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.date {
+  color: #707070;
+}
+
+.ticketContainer {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  align-items: center;
+}
+.ticketContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ticketContainer::-webkit-scrollbar-thumb {
+  background-color: #8daab9cc;
+  border-radius: 10px;
+}
+
+.ticketContainer::-webkit-scrollbar-track {
+  background-color: #a9d5ebcc;
+  border-radius: 10px;
+}
+
+.subContainer {
+  height: 100%;
+  width: 25%;
+  margin-left: 1rem;
+  background-color: #eef2f5;
+}
+
+.selectTime {
+  border: none;
+}
+
+.option {
+  border: none;
+}

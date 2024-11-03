@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+  width: 100%;
+}
+
+.box {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inputBox {
+  border: 1px solid #828282;
+  color: #828282;
+  padding: 0.5 rem 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.input {
+  border: none;
+  height: 80%;
+  width: 90%;
+  margin-left: 1%;
+}
+
+.register {
+  width: 80%;
+  background-color: #17a2b8;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.text {
+  color: #828282;
+}
+
+.login {
+  width: 80%;
+  background-color: white;
+  color: #17a2b8;
+  border-radius: 15px;
+  border: 1px solid #17a2b8;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.error {
+  display: none;
+  color: red;
+}

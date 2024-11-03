@@ -1,0 +1,164 @@
+.taskContainer {
+  overflow-y: scroll;
+  height: 90%;
+}
+.taskContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.taskContainer::-webkit-scrollbar-thumb {
+  background-color: #8daab9cc;
+  border-radius: 10px;
+}
+
+.taskContainer::-webkit-scrollbar-track {
+  background-color: #a9d5ebcc;
+  border-radius: 10px;
+}
+
+.task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 4%;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.innerBox {
+  position: relative;
+  width: 90%;
+  height: 90%;
+}
+
+.collapse,
+.popUpDots,
+.expandCollapse {
+  cursor: pointer;
+}
+
+.boxOne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: x-small;
+  margin: 3% 0%;
+}
+
+.boxTwo {
+  margin: 3% 0%;
+  cursor: pointer;
+}
+
+.checklist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  font-weight: bold;
+  margin: 3% 0%;
+}
+
+.taskBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0rem;
+  margin: 0.2rem 0rem;
+  font-size: small;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+}
+
+.checkbox {
+  margin: 0rem 0.3rem;
+}
+
+.taskInput {
+  width: 90%;
+}
+
+.dueDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: xx-small;
+  font-weight: bold;
+  margin: 3% 0%;
+}
+
+.taskStatus {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background-color: #dbdbdb;
+  padding: 3%;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.statusBox {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.dateStatus {
+  border: none;
+  border-radius: 5px;
+  padding: 3%;
+  margin: 1%;
+}
+
+.popUp {
+  width: 60%;
+  position: absolute;
+  right: 0px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 22px 0px #7e7a7a40;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.edit,
+.share,
+.delete {
+  background: none;
+  border: none;
+  padding: 0.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete {
+  color: #cf3636;
+}
+
+.assignedTo {
+  background-color: #ffebeb;
+  border-radius: 50%;
+  padding: 0.3rem;
+  margin-left: 0.2rem;
+  font-size: x-small;
+  cursor: pointer;
+}
+
+.priority {
+  margin-left: 0.3rem;
+}
+
+@media (max-width: 1200px) {
+  .taskStatus {
+    padding: 3% 1%;
+    font-size: xx-small;
+  }
+  .dateStatus {
+    padding: 3% 1%;
+  }
+}

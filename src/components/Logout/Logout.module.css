@@ -1,0 +1,57 @@
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.subContainer {
+  height: 30vh;
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  position: relative;
+  border-radius: 5px;
+}
+
+.innerBox {
+  height: 80%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: large;
+  font-weight: bold;
+}
+
+.logout {
+  width: 80%;
+  background-color: #17a2b8;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.cancel {
+  width: 80%;
+  background-color: white;
+  color: #cf3636;
+  border-radius: 15px;
+  border: 1px solid #cf3636;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: medium;
+}

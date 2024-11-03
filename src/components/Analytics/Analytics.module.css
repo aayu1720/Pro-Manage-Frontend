@@ -1,0 +1,59 @@
+.container {
+  width: 85%;
+  height: 100%;
+}
+
+.heading {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 0rem 0.5rem;
+  margin-left: 1rem;
+  box-sizing: border-box;
+}
+
+.subContainer {
+  height: 40%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 1rem;
+}
+
+.boxOne,
+.boxTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 48%;
+  background: #f9fcff;
+  border-radius: 10px;
+}
+
+.subBoxOne,
+.subBoxTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80%;
+  width: 80%;
+}
+
+.data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.analyticsImg {
+  margin-right: 3%;
+}
+
+.info {
+  width: 70%;
+}

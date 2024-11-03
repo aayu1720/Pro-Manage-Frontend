@@ -1,0 +1,76 @@
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(167, 166, 166, 0.7);
+}
+
+.subContainer {
+  height: 30vh;
+  width: 28vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  position: relative;
+  border-radius: 10px;
+}
+
+.innerBox {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: large;
+  font-weight: bold;
+}
+
+.input {
+  border: none;
+  padding: 0.5rem 0.5rem;
+  width: 99%;
+  border-radius: 5px;
+  border: 1px solid #767575;
+}
+
+.text {
+  width: 100%;
+}
+
+.buttonBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addPeople {
+  width: 48%;
+  background-color: #17a2b8;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: small;
+}
+
+.cancel {
+  width: 48%;
+  background-color: white;
+  color: #cf3636;
+  border-radius: 15px;
+  border: 1px solid #cf3636;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: small;
+}
