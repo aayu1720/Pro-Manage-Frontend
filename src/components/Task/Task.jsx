@@ -60,6 +60,7 @@ function Task({ setTask, taskDetails, setTaskDetails }) {
   const [selectedDate, setSelectedDate] = useState(null);
   const [email, setEmail] = useState(localStorage.getItem("email"));
   const [assignee, setAssignee] = useState([]);
+  const [inputType, setInputType] = useState("text");
   const [taskData, setTaskData] = useState({
     title: taskDetails?.title || "",
     priority: taskDetails?.priority || "",
@@ -333,8 +334,10 @@ function Task({ setTask, taskDetails, setTaskDetails }) {
 
         <div className={styles.buttonContainer}>
           <input
-            type="date"
             className={styles.datepicker}
+            type={inputType}
+            onFocus={() => setInputType("date")}
+            onBlur={() => setInputType("text")}
             placeholder="Select Due Date"
             value={
               taskData.dueDate instanceof Date && !isNaN(taskData.dueDate)
