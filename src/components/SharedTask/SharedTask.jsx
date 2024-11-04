@@ -5,7 +5,7 @@ import moderatePriorityImg from "../../assets/icons/blue_circle.png";
 import highPriorityImg from "../../assets/icons/pink_circle.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { format } from "date-fns";
 function SharedTask({ taskDetails }) {
   const [day, setDay] = useState(new Date().getDate());
   const [month, setMonth] = useState("");
@@ -30,6 +30,32 @@ function SharedTask({ taskDetails }) {
     setMonth(months[today.getMonth()]);
   }, []);
 
+  const formatDate = (dateStr) => {
+    const date = new Date(dateStr);
+    return format(date, "MMM d");
+  };
+
+  const getDueDateStyles = (dueDate, section) => {
+    if (section === "done") {
+      return { background: "green", color: "white" };
+    }
+
+    if (!dueDate) return { background: "#DBDBDB", color: "black" };
+
+    const [month, day] = dueDate.split(" ");
+    const monthIndex = months.indexOf(month);
+    const currentMonthIndex = new Date().getMonth();
+    const currentDate = new Date().getDate();
+
+    if (
+      monthIndex < currentMonthIndex ||
+      (monthIndex === currentMonthIndex && Number(day) < currentDate)
+    ) {
+      return { background: "#CF3636", color: "white" };
+    } else {
+      return { background: "#DBDBDB", color: "black" };
+    }
+  };
   return (
     <div className={styles.task}>
       <div className={styles.innerBox}>
@@ -83,10 +109,18 @@ function SharedTask({ taskDetails }) {
           })}
         </div>
 
-        {taskDetails?.dueDate !== null ? (
+        {!!taskDetails?.dueDate ? (
           <div className={styles.dueDate}>
             <p className={styles.dateStyle}>Due Date</p>
-            <span className={styles.dateStatus}>{taskDetails?.dueDate}</span>
+            <span
+              style={getDueDateStyles(
+                formatDate(taskDetails.dueDate),
+                taskDetails.queue
+              )}
+              className={styles.dateStatus}
+            >
+              {formatDate(taskDetails.dueDate)}
+            </span>
           </div>
         ) : (
           <span></span>

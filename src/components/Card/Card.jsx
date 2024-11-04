@@ -262,7 +262,7 @@ export const Card = ({
         <div className={styles.dueDate}>
           {item?.dueDate !== null ? (
             <span
-              style={getDueDateStyles(item?.dueDate, section)}
+              style={getDueDateStyles(formatDate(item.dueDate), section)}
               className={styles.dateStatus}
             >
               {formatDate(item.dueDate)}
