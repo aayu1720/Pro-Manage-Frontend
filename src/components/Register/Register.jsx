@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Register.module.css";
 import { registerUser } from "../../services/userAuth";
 import { addUser } from "../../services/task";
@@ -39,6 +39,7 @@ function Register({ setAuth }) {
   };
 
   const handleSubmit = async () => {
+    setRegister(true);
     // Reset errors
     setErrors({
       name: false,
@@ -78,15 +79,16 @@ function Register({ setAuth }) {
     if (hasError) {
       return; // Stop if there are errors
     }
+    try {
+      const result = await registerUser(userData);
 
-    const result = await registerUser(userData);
-
-    if (result) {
-      await addUser(userData.email);
-      changeRegister();
-    } else {
+      if (result) {
+        await addUser(userData.email);
+        changeRegister();
+      }
+    } catch (error) {
       toast("User  already exists", {
-        position: "bottom-center",
+        position: "top-center",
         autoClose: 4000,
         hideProgressBar: false,
         closeOnClick: true,

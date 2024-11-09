@@ -40,24 +40,25 @@ export default function Login({ setAuth }) {
       return;
     }
 
-    const result = await loginUser(formData);
-
-    if (result) {
-      localStorage.setItem("trigger", 0);
-      navigate("/home");
-      return;
+    try {
+      const result = await loginUser(formData);
+      if (result) {
+        localStorage.setItem("trigger", 0);
+        navigate("/home");
+        return;
+      }
+    } catch (error) {
+      toast("Invalid Credentials", {
+        position: "top-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
-
-    toast("Invalid Credentials", {
-      position: "top-center",
-      autoClose: 4000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
   };
 
   const changeLogin = () => {
